@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 namespace SlowpokeStudio.Level
@@ -8,6 +9,8 @@ namespace SlowpokeStudio.Level
         public LevelSO levelDatabase;
         public Transform levelParent;
 
+        [SerializeField] private TextMeshProUGUI levelText;
+
         private int currentLevelIndex = 0;
         private GameObject currentLevelInstance;
 
@@ -16,49 +19,51 @@ namespace SlowpokeStudio.Level
             LoadLevel(currentLevelIndex);
         }
 
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                LoadNextLevel();
+            }
+        }
+
         public void LoadLevel(int index)
         {
             if (index < 0 || index >= levelDatabase.levels.Count)
             {
-                Debug.LogError("Level index out of range!");
+                Debug.LogError("Level index out of bounds!");
                 return;
             }
 
+            // Destroy previous level if exists
             if (currentLevelInstance != null)
-            {
                 Destroy(currentLevelInstance);
-            }
+
+            // Instantiate new level
+            currentLevelInstance = Instantiate(
+                levelDatabase.levels[index].levelObject,
+                levelParent.position,
+                Quaternion.identity,
+                levelParent
+            );
 
             currentLevelIndex = index;
-            currentLevelInstance = Instantiate(levelDatabase.levels[index].levelObject, levelParent);
-            Debug.Log("Loaded Level: " + levelDatabase.levels[index].levelName);
+
+            // Update level name UI
+            if (levelText != null)
+            {
+                levelText.text = $"Level: {levelDatabase.levels[index].levelName}";
+            }
         }
 
         public void LoadNextLevel()
         {
             int nextIndex = currentLevelIndex + 1;
+
             if (nextIndex >= levelDatabase.levels.Count)
-            {
-                Debug.Log("All levels completed!");
-                return;
-            }
+                nextIndex = 0; // Optional: loop back to first level
 
             LoadLevel(nextIndex);
-        }
-
-        public void RestartCurrentLevel()
-        {
-            LoadLevel(currentLevelIndex);
-        }
-
-        public int GetCurrentLevelNumber()
-        {
-            return currentLevelIndex + 1;
-        }
-
-        public string GetCurrentLevelName()
-        {
-            return levelDatabase.levels[currentLevelIndex].levelName;
         }
     }
 }

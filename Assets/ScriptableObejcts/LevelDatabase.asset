@@ -13,21 +13,21 @@ MonoBehaviour:
   m_Name: LevelDatabase
   m_EditorClassIdentifier: 
   levels:
-  - levelName: Easy-Level-1
-    levelObject: {fileID: 6569162631040230299, guid: 8a7f41e10697a884fae78d045044a3e9, type: 3}
-  - levelName: Easy-Level-2
-    levelObject: {fileID: 6569162631040230299, guid: f2d9833ac62a96340aabaf65801ffd02, type: 3}
-  - levelName: Easy-Level-3
-    levelObject: {fileID: 6569162631040230299, guid: da15b8845dbd4414eb1d7d7e6fa8f034, type: 3}
-  - levelName: Medium-Level-1
-    levelObject: {fileID: 6569162631040230299, guid: e00dcad2c3f648e41a6f0d71755a6c92, type: 3}
-  - levelName: Medium-Level-2
-    levelObject: {fileID: 6569162631040230299, guid: 760a96ca515ffd14789b52827fe44641, type: 3}
-  - levelName: Medium-Level-3
-    levelObject: {fileID: 6569162631040230299, guid: f6b58496a70da6e4eb4468ca9e3befca, type: 3}
-  - levelName: Difficult-Level-1
-    levelObject: {fileID: 6569162631040230299, guid: c93ef339b14fadb49aae69b4e4317688, type: 3}
-  - levelName: Difficult-Level-2
-    levelObject: {fileID: 6569162631040230299, guid: 5463b461d52ec93499320dd6d06acf01, type: 3}
-  - levelName: Difficult-Level-3
-    levelObject: {fileID: 6569162631040230299, guid: a099c0fd6be8638409cc5598a8efbd83, type: 3}
+  - levelName: 1
+    levelObject: {fileID: 1636073196622143963, guid: b4074d7a2b85d7840af833fd66d9c365, type: 3}
+  - levelName: 2
+    levelObject: {fileID: 1636073196622143963, guid: 08ba63d8caae09340ab235624d28f8b7, type: 3}
+  - levelName: 3
+    levelObject: {fileID: 1636073196622143963, guid: 3cf4d38386449e947b860f4daad08a44, type: 3}
+  - levelName: 4
+    levelObject: {fileID: 1636073196622143963, guid: 68850404ef7af4e4daac4c1f5e4e4134, type: 3}
+  - levelName: 5
+    levelObject: {fileID: 1636073196622143963, guid: 935cb99362adf0b4dadedf6bfc89a322, type: 3}
+  - levelName: 6
+    levelObject: {fileID: 1636073196622143963, guid: 45ec5082d27cd9747a45839675e944d5, type: 3}
+  - levelName: 7
+    levelObject: {fileID: 1636073196622143963, guid: e7c3aebb9c86839448d6088e91e63ff0, type: 3}
+  - levelName: 8
+    levelObject: {fileID: 1636073196622143963, guid: f818ef706abd3e44cb2f30bf1f89eb7c, type: 3}
+  - levelName: 9
+    levelObject: {fileID: 1636073196622143963, guid: ee010518ff56233469dd125d55875263, type: 3}
