@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using SlowpokeStudio.Generic;
 
 namespace SlowpokeStudio.Level
 {
@@ -46,6 +47,14 @@ namespace SlowpokeStudio.Level
                 Quaternion.identity,
                 levelParent
             );
+            // After instantiating the level
+            CubeSelector[] allSelectors = currentLevelInstance.GetComponentsInChildren<CubeSelector>();
+
+            foreach (var selector in allSelectors)
+            {
+                selector.Initialize(GameService.Instance.trayManager); // Only pass the TrayManager
+            }
+
 
             currentLevelIndex = index;
 

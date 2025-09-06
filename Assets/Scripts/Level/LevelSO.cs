@@ -3,6 +3,11 @@ using UnityEngine;
 
 namespace SlowpokeStudio.Level
 {
+    public enum ObjectColor
+    {
+        Red, Green, Blue, Yellow
+    }
+
     [System.Serializable]
     public struct LevelData
     {

@@ -31,7 +31,7 @@ namespace SlowpokeStudio.UI
 
         private void OnSettingsButton()
         {
-            GameServices.Instance.uiManager.settingsUI.settingsUIObject.SetActive(true);
+            GameService.Instance.uiManager.settingsUI.settingsUIObject.SetActive(true);
         }
 
     }

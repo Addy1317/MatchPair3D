@@ -10,7 +10,7 @@ using UnityEngine;
 
 namespace SlowpokeStudio.Generic
 {
-    public class GameServices : GenericMonoSingleton<GameServices>
+    public class GameService : GenericMonoSingleton<GameService>
     {
         [Header("Service")]
         [SerializeField] internal AudioManager audioManager;
@@ -18,7 +18,7 @@ namespace SlowpokeStudio.Generic
         [SerializeField] internal EventManager eventManager;
         [SerializeField] internal GameManager gameManager;
         [SerializeField] internal LevelManager levelManager;
-        [SerializeField] internal SpawnManager spawnManager;
+        [SerializeField] internal TrayManager trayManager;
         [SerializeField] internal UIManager uiManager;
 
         protected override void Awake()
@@ -44,8 +44,8 @@ namespace SlowpokeStudio.Generic
             { "CurrencyManager", currencyManager },
             { "EventManager", eventManager },
             { "GameManager", gameManager },
-            { "SpawnManager", spawnManager },
             { "LevelManager", levelManager },
+            { "TrayManager", trayManager },
             { "UIManager", uiManager }
             };
 

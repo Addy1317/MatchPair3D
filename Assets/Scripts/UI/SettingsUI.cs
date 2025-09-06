@@ -37,13 +37,13 @@ namespace SlowpokeStudio
 
         private void OnHomeButton()
         {
-            GameServices.Instance.uiManager.menuUI.menuUIObject.SetActive(true);
+            GameService.Instance.uiManager.menuUI.menuUIObject.SetActive(true);
             OnResumeButton();
         }
 
         private void OnQuitButton()
         {
-            GameServices.Instance.uiManager.menuUI.OnQuitButton();
+            GameService.Instance.uiManager.menuUI.OnQuitButton();
         }
     }
 }

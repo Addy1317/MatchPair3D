@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5029194424783131}
   - component: {fileID: 6648230989307608777}
   - component: {fileID: 7494972661395231550}
+  - component: {fileID: -7268651990720973881}
   m_Layer: 0
   m_Name: Object-Box
   m_TagString: Untagged
@@ -105,3 +106,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-7268651990720973881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6943309069684539232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84375dd17976a0045822a3e97dc2d0eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubeColor: 0
+  redMat: {fileID: 2100000, guid: 9187487f671608f4797a0a0496fb92e5, type: 2}
+  greenMat: {fileID: 2100000, guid: d37bcc5d2b6620943aa8cb50409311da, type: 2}
+  blueMat: {fileID: 2100000, guid: 977bca3cd371db04697ef7b6fb018caf, type: 2}
+  yellowMat: {fileID: 2100000, guid: b5a75831cef912748ad4057d9df5bd16, type: 2}
