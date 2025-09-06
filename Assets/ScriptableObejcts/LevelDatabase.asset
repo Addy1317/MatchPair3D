@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce1595cadbfb1814baa541c71efd2429, type: 3}
+  m_Name: LevelDatabase
+  m_EditorClassIdentifier: 
+  levels:
+  - levelName: Easy-Level-1
+    levelObject: {fileID: 6569162631040230299, guid: 8a7f41e10697a884fae78d045044a3e9, type: 3}
+  - levelName: Easy-Level-2
+    levelObject: {fileID: 6569162631040230299, guid: f2d9833ac62a96340aabaf65801ffd02, type: 3}
+  - levelName: Easy-Level-3
+    levelObject: {fileID: 6569162631040230299, guid: da15b8845dbd4414eb1d7d7e6fa8f034, type: 3}
+  - levelName: Medium-Level-1
+    levelObject: {fileID: 6569162631040230299, guid: e00dcad2c3f648e41a6f0d71755a6c92, type: 3}
+  - levelName: Medium-Level-2
+    levelObject: {fileID: 6569162631040230299, guid: 760a96ca515ffd14789b52827fe44641, type: 3}
+  - levelName: Medium-Level-3
+    levelObject: {fileID: 6569162631040230299, guid: f6b58496a70da6e4eb4468ca9e3befca, type: 3}
+  - levelName: Difficult-Level-1
+    levelObject: {fileID: 6569162631040230299, guid: c93ef339b14fadb49aae69b4e4317688, type: 3}
+  - levelName: Difficult-Level-2
+    levelObject: {fileID: 6569162631040230299, guid: 5463b461d52ec93499320dd6d06acf01, type: 3}
+  - levelName: Difficult-Level-3
+    levelObject: {fileID: 6569162631040230299, guid: a099c0fd6be8638409cc5598a8efbd83, type: 3}
