@@ -47,6 +47,13 @@ namespace SlowpokeStudio.Level
                 Quaternion.identity,
                 levelParent
             );
+            RackTile[] tiles = currentLevelInstance.GetComponentsInChildren<RackTile>();
+
+            foreach (var tile in tiles)
+            {
+                tile.Initialize(GameService.Instance.trayManager);
+            }
+
             // After instantiating the level
             CubeSelector[] allSelectors = currentLevelInstance.GetComponentsInChildren<CubeSelector>();
 

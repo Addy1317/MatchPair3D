@@ -41,6 +41,7 @@ namespace SlowpokeStudio
 
             isSelected = true;
             trayManager.AddToTray(this);
+            //trayManager.AddPairToTray(this);
         }
 
         private void ApplyColor()
