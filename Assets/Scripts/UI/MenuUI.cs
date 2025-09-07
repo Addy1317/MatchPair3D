@@ -1,3 +1,4 @@
+using SlowpokeStudio.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,11 +32,14 @@ namespace SlowpokeStudio.UI
 
         internal void OnplayButton()
         {
+            GameService.Instance.audioManager.PlaySFX(Audio.SFXType.OnButtonClickSFX);
+            GameService.Instance.gameManager.IsGamePlayable = true;
             menuUIObject.SetActive(false);
         }
 
         internal void OnQuitButton()
         {
+            GameService.Instance.audioManager.PlaySFX(Audio.SFXType.OnButtonClickSFX);
             Application.Quit();
         }
     }

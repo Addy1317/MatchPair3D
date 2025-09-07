@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace SlowpokeStudio
@@ -17,22 +15,18 @@ namespace SlowpokeStudio
         {
             if (trayManager == null) return;
 
-            // Fetch both cubes under this tile
+            // Get 2 cubes (children)
             CubeSelector[] cubes = GetComponentsInChildren<CubeSelector>();
 
             if (cubes.Length != 2)
             {
-                Debug.LogWarning($"Tile {gameObject.name} does not contain 2 cubes.");
+                Debug.LogWarning($"Tile {name} does not contain 2 cubes.");
                 return;
             }
 
-            // Disable further clicks
-            this.enabled = false;
+            this.enabled = false; // prevent double click
 
-            // Send pair to tray
             trayManager.AddPairToTray(cubes[0], cubes[1]);
-
-            // Optional: Play click sound or visual feedback
         }
     }
 }

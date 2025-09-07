@@ -1,3 +1,5 @@
+using SlowpokeStudio.Generic;
+using SlowpokeStudio.Manager;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,7 +27,9 @@ namespace SlowpokeStudio.UI
 
         private void OnNextButton()
         {
-
+            GameService.Instance.audioManager.PlaySFX(Audio.SFXType.OnButtonClickSFX);
+            levelCompletionObject.SetActive(false);
+            GameService.Instance.gameManager.LoadNextLevel();
         }
     }
 }

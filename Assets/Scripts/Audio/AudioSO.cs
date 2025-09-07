@@ -6,7 +6,8 @@ namespace SlowpokeStudio.Audio
     {
         OnButtonClickSFX,
         OnSelectionClickSFX,
-        OnGoalCompletedSFX
+        OnLevelCompletedSFX,
+        OnLevelFailSFX,
     }
 
     [CreateAssetMenu(fileName = "AudioSO", menuName = "Audio/AudioSO")]

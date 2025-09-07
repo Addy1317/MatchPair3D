@@ -1,4 +1,6 @@
+﻿using SlowpokeStudio.Generic;
 using SlowpokeStudio.Level;
+using SlowpokeStudio.Manager;
 using UnityEngine;
 
 namespace SlowpokeStudio
@@ -25,7 +27,6 @@ namespace SlowpokeStudio
 #if UNITY_EDITOR
         private void OnValidate()
         {
-            // Auto-apply color when changed in Inspector
             ApplyColor();
         }
 #endif
@@ -37,11 +38,23 @@ namespace SlowpokeStudio
 
         private void OnMouseDown()
         {
-            if (isSelected || trayManager == null) return;
+            /*  if (isSelected || trayManager == null) return;
 
-            isSelected = true;
-            trayManager.AddToTray(this);
-            //trayManager.AddPairToTray(this);
+              isSelected = true;
+              //trayManager.AddToTray(this);*/
+            if (!GameService.Instance.gameManager.IsGamePlayable)
+                return;
+
+            Debug.Log("🟡 OnMouseDown triggered on: " + gameObject.name);
+
+            if (trayManager != null)
+            {
+                trayManager.OnCubeClicked(this); 
+            }
+            else
+            {
+                Debug.LogError("❌ trayManager is NULL for " + gameObject.name);
+            }
         }
 
         private void ApplyColor()
@@ -65,5 +78,7 @@ namespace SlowpokeStudio
                     break;
             }
         }
+    
+
     }
 }

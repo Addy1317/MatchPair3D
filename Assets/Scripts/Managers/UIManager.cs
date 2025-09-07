@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace SlowpokeStudio.UI
@@ -10,8 +8,7 @@ namespace SlowpokeStudio.UI
         [SerializeField] internal GameUI gameUI;
         [SerializeField] internal MenuUI menuUI;
         [SerializeField] internal SettingsUI settingsUI;
-        [SerializeField] internal LevelCompleteUI LevelCompleteUI;
-        [SerializeField] internal LevelFailUI LevelFailUI;
-        
+        [SerializeField] internal LevelCompleteUI levelCompleteUI;
+        [SerializeField] internal LevelFailUI levelFailUI;  
     }
 }

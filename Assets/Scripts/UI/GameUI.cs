@@ -1,4 +1,4 @@
-using SlowpokeStudio.Generic;
+﻿using SlowpokeStudio.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,23 +14,28 @@ namespace SlowpokeStudio.UI
 
         private void OnEnable()
         {
-            restartButton.onClick.AddListener(OnRestartButton);
+            restartButton.onClick.AddListener(OnReloadButton);
             settingsButton.onClick.AddListener(OnSettingsButton);
         }
 
         private void OnDisable()
         {
-            restartButton.onClick.RemoveListener(OnRestartButton);
+            restartButton.onClick.RemoveListener(OnReloadButton);
             settingsButton.onClick.RemoveListener(OnSettingsButton);
         }
 
-        private void OnRestartButton()
+        internal void OnReloadButton()
         {
-
+            GameService.Instance.audioManager.PlaySFX(Audio.SFXType.OnButtonClickSFX);
+            Debug.Log("Restarting current level...");
+            GameService.Instance.trayManager.ClearTray();
+            int currentIndex = GameService.Instance.levelManager.CurrentLevelIndex;
+            GameService.Instance.levelManager.LoadLevel(currentIndex);
         }
 
         private void OnSettingsButton()
         {
+            GameService.Instance.audioManager.PlaySFX(Audio.SFXType.OnButtonClickSFX);
             GameService.Instance.uiManager.settingsUI.settingsUIObject.SetActive(true);
         }
 

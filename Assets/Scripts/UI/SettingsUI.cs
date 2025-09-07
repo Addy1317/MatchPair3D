@@ -32,17 +32,21 @@ namespace SlowpokeStudio
 
         private void OnResumeButton()
         {
+            GameService.Instance.audioManager.PlaySFX(Audio.SFXType.OnButtonClickSFX);
             settingsUIObject.SetActive(false);
         }
 
         private void OnHomeButton()
         {
+            GameService.Instance.audioManager.PlaySFX(Audio.SFXType.OnButtonClickSFX);
             GameService.Instance.uiManager.menuUI.menuUIObject.SetActive(true);
+            GameService.Instance.uiManager.gameUI.OnReloadButton();
             OnResumeButton();
         }
 
         private void OnQuitButton()
         {
+            GameService.Instance.audioManager.PlaySFX(Audio.SFXType.OnButtonClickSFX);
             GameService.Instance.uiManager.menuUI.OnQuitButton();
         }
     }
